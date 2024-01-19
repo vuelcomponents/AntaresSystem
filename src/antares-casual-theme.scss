@@ -1,0 +1,394 @@
+.spinner-container{
+  z-index:4;
+  background:#00000055;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:100%;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+@font-face {
+  font-family: 'Montserrat'; /* This is the name you'll use in the font-family property */
+  src: url('@/assets/stacked/Montserrat-Bold.ttf') format('truetype');
+  /* Replace 'path/to/your/custom-font.ttf' with the actual path to your TTF font file */
+}
+@font-face {
+  font-family: 'Fredoka'; /* This is the name you'll use in the font-family property */
+  src: url('@/assets/stacked/FredokaOne-Regular.ttf') format('truetype');
+  /* Replace 'path/to/your/custom-font.ttf' with the actual path to your TTF font file */
+}
+@font-face {
+  font-family: 'Barlow-Bold'; /* This is the name you'll use in the font-family property */
+  src: url('@/assets/stacked/Barlow-SemiBold.ttf') format('truetype');
+  /* Replace 'path/to/your/custom-font.ttf' with the actual path to your TTF font file */
+}
+@font-face {
+  font-family: 'Barlow'; /* This is the name you'll use in the font-family property */
+  src: url('@/assets/stacked/Barlow-Light.ttf') format('truetype');
+  /* Replace 'path/to/your/custom-font.ttf' with the actual path to your TTF font file */
+}
+@font-face {
+  font-family: 'Barlow-Reg'; /* This is the name you'll use in the font-family property */
+  src: url('@/assets/stacked/Barlow-Regular.ttf') format('truetype');
+  /* Replace 'path/to/your/custom-font.ttf' with the actual path to your TTF font file */
+}
+@import 'mdi/css/materialdesignicons.css';
+@import '@mdi/font/css/materialdesignicons.css';
+@import 'primevue/resources/primevue.min.css';
+@import url('primevue/resources/themes/lara-light-indigo/theme.css');
+@import 'primeicons/primeicons.css';
+.p-colorpicker-panel{
+  z-index:3!important;
+}
+.select-renderer{
+  width:100%; height:35px;display:flex;align-items:center;
+}
+.flex-center-center{
+  display:flex;align-items:center;justify-content:center;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  overflow-y:hidden!important;
+}
+body{
+  margin:0;
+  padding:0;
+  background:#fcfcfc;
+  font-size:1.2em;
+  overflow-y:hidden!important;
+
+}
+body *{
+  font-family:'Barlow-Reg', sans-serif;
+}
+nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+#web-header{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:6;
+  transition: all 0.2s ease;
+}
+.web-header{
+  background:#001c20;
+  width:100%;
+  height:70px;
+  display:grid;
+  border-bottom: solid 4px rgba(164, 134, 134, 0.12);
+  grid-template-columns:1fr 6fr;
+  padding-inline:20px;
+  img{
+    width:150px;
+    height:23px;
+  }
+  div{
+    width:100%;
+    display:flex;
+    align-items:center;
+
+  }
+}
+.p-submenu-list, .p-menuitem-active *, .p-menuitem-active{
+  z-index:10!important;
+}
+
+.on-dark-bg.p-menubar.p-component{
+  background:#001c20!important;
+  border:none;
+  width:100%!important;
+  color:#fff!important;
+  padding-inline:50px;
+  justify-content:right!important;
+  z-index:11!important;
+
+  .p-menuitem-content{
+    padding:14px;
+    color:#fff!important;
+    a, span{
+      color:#fff!important;
+    }
+    transition: background-color 0.4s ease;
+  }
+  .p-menuitem-content:hover{
+    background: #2d2d2d !important;
+    border:none;
+
+  }
+  .p-menuitem.p-focus{
+    background: #2d2d2d!important;
+    filter:brightness(110%);
+    .p-menuitem-link{
+      background: #2d2d2d!important;
+      border:none!important;
+    }
+    .p-menuitem-content{
+      background: #2d2d2d!important;
+      border:none!important;
+    }
+  }
+  .p-menuitem.p-menuitem-active.p-highlight *{
+    background:#2d2d2d!important;
+    border-radius:5px;
+  }
+
+}
+.home-grid{
+  width:100%;
+  min-height:50vh;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  div{
+    width:100%;
+    height:100%;
+    background-size:cover;
+    display:flex;
+    justify-content: left;
+  }
+}
+.min-height-320{
+  min-height:320px;
+}
+h1, h2, h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size:3rem;
+  text-align:left;
+}
+.p-menuitem-icon{
+  margin-right:10px;
+}
+.module-splitter{
+  div{
+    background:  #001c20;
+    color:#ffffff90;
+    box-shadow: 3px 3px 3px #00000010;
+    border-top: solid 1px #00000010;
+    border-left: solid 1px #00000010;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    transition:all 0.5s ease;
+    cursor:pointer;
+  }
+  div:hover{
+    filter:brightness(180%);
+    background: rgba(0, 28, 32, 0.91);
+  }
+}
+.bigicon{
+  font-size:8rem;
+}
+.p-message.p-message-info{
+  color: #0e4048 !important;
+  border-color:  #0a464f !important;
+  background:#ffffff99;
+  svg, span{
+    color: #0e4048 !important;
+  }
+}
+
+@keyframes come-from-right {
+  0%{
+    transform: translateY(-500px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.come-from-right{
+  transition: transform 0.6s ease;
+  animation: come-from-right 0.6s ease
+}
+.scrolled-down{
+  margin-top:-70px!important;
+
+}
+.moved-up {
+  transform:translateY(-70px)
+}
+.moved-down {
+  transform:translateY(0)
+}
+.rotate{
+  transform: rotate(360deg) ;
+}
+span{
+  transition: all 0.4s ease;
+}
+span:not(#hide-menu).rotable:hover{
+  background:red;
+  border-radius:6px;
+}
+#hide-menu:hover{
+  background:grey;
+}
+.left-dashboard-unique, .right-dashboard-unique{
+  transition: transform 0.4s ease;
+}
+.position-x-minus-300{
+  transform:translateX(-300px)
+}
+.ag-theme-alpine{
+  transition: all 0.4s ease;
+}
+.grid-black{
+  --ag-border-color:gray;
+  max-width:100%;
+  .ag-root-wrapper{
+    border:none!important;
+  }
+  .ag-header-container * {
+    background: #01252a;
+    color:#fff;
+  }
+  .ag-header-row.ag-header-row-column *{
+    background:#001c20!important;
+  }
+  .ag-header-row.ag-header-row-column-group{
+    border-bottom: solid 1px black!important;
+  }
+}
+.flex-left.p-menubar.p-component{
+  justify-content:flex-start!important;
+  text-align:left;
+}
+
+*{
+  word-break: break-all;
+}
+.search_inp{
+  width:100%; background:#001c20; display:flex; justify-content:flex-end; align-items:center;
+}
+.dashboard-container{
+  position:relative;
+  z-index:2;
+  padding-top:10px;
+  min-height:100vh;
+  width:100vw;
+  max-width:100vw;
+  bottom:10px;
+  display:grid;
+  grid-template-columns:1fr 4.5fr;
+  border-radius: 6px;
+
+  transition: transform 0.3s ease;
+  > section:nth-child(1) {
+    margin-top:-50px;
+    padding-top:50px;
+    background: linear-gradient(301deg, rgba(8,39,43,1) 0%, rgba(1,17,19,1) 100%);
+    border-right: solid 4px rgba(164, 134, 134, 0.22);
+    width:100%;
+    nav{
+      padding:0;
+      margin:0;
+      word-break:break-all;
+      transition: all 0.3s ease;
+      position:fixed;
+      overflow-y:auto;
+      max-height:90%;
+    }
+    div{
+      font-family:'Montserrat', sans-serif!important;
+      text-align:left;
+
+      padding-inline:10%;
+      cursor:pointer;
+      transition: all 0.5s ease;
+      font-size:0.8em;
+      display:flex;
+      align-items:center;
+      gap:30px;
+      border-bottom:solid 1px #ffffff29;
+      i{
+        font-size:2em;
+      }
+      user-select: none;
+    }
+    div:not(.sublink){
+      padding:10%;
+    }
+    .sublink{
+      color:#15abc1;
+    }
+    div:hover{
+      background: #182b2f;
+    }
+
+  }
+  section{
+
+    color: rgba(255, 255, 255, 0.87);
+
+  }
+}
+
+.dashboard-container{
+  transition:all 0.4s ease;
+}
+.active-cell-custom{
+  background: #d5d5d5;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.active-update-cell-custom {
+  background: #264548 !important;
+  color: white;
+  cursor: pointer;
+}
+.multiple-create{
+  background:#264548;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  padding-inline:20px;
+  padding-bottom:20px;
+  option{
+    color:#001c20!important;
+  }
+  .form-text-input{
+    background:#ffffff10;
+    color:#fff;
+  }
+  button{
+    margin-block:10px;
+    margin-left:5px;
+  }
+  div{
+    text-align:left;
+  }
+}
+.button-quick{
+  background:#fff;
+  color: #264548;
+  border-radius:8px;
+  min-width:100px;
+}
+.button-quick-quit{
+  width:60px;
+  background:#001c20;
+  color:#fff;
+  border-radius:8px;
+}
+.paddingBlock{
+  padding-block:20px;
+}
+.smallIcon{
+  font-size:0.8em;
+}
