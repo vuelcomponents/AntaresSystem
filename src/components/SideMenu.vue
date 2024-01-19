@@ -1,21 +1,18 @@
 <template>
-    <nav ref="navigation" id="nav" :style="{ height:'100vh',marginTop: marginTop + 'px',  transition:'none' }">
-
-        <section  :style="`height:122x;`" class="transition" v-for="item in this.menu" :key="item" :ref="`section-${item.label}`">
-            <div @click="dropDown(item)">
-                <i :class=" item.icon ?? 'mdi mdi-link'"></i>
+    <nav ref="navigation" id="nav"  :style="{ height:'100vh',marginTop: marginTop + 'px',  transition:'none' }">
+      <section style="text-align:left; margin-left:30px;">
+        <img @click="$router.push({name:'home'})" src="@/assets/refactor/logo.png" style="width:40%;cursor:pointer"/>
+      </section>
+        <section  :style="`height:60px;`" class="transition" v-for="item in this.menu" :key="item" >
+            <div  @click="()=>{if(item.routeName){this.$router.push({name:item.routeName})}}" class="div-link-icon-div">
+              <div class="link-icon-div">
+                <i :class="'link-icon '+  item.icon ?? 'mdi mdi-link'"></i>
+              </div>
                 {{item.label}}
-            </div>
-            <div v-for="sub in item.children" :key="sub" :class="['sublink', item.dropped ? null : 'hidden']" @click="()=>{if(sub.routeName){this.$router.push({name:sub.routeName})}}">
-                <i :class="sub.icon ?? 'mdi mdi-link'"></i>
-                {{sub.label}}
             </div>
             <div style="display:none;" class="hidden"></div>
         </section>
-
     </nav>
-
-
 </template>
 
 <script>
@@ -23,16 +20,6 @@
 export default {
     name: "SideMenu",
     methods:{
-      dropDown(item){
-          item.dropped = !item.dropped;
-          var ref=  this.$refs[`section-${item.label}`][0]
-          if(item.dropped){
-              ref.style.height= 130 + item.children.length * 38 + 'px'
-          }
-          else{
-              ref.style.height= "100px"
-          }
-      },
       fitMenuSize(){
         setTimeout(()=>{
           if(this.$refs.navigation) {
@@ -55,105 +42,69 @@ export default {
               Recruitment:[
                 {
                   label:'Recruitment Process',
+                  routeName:'RecruitmentList',
                   icon:'mdi mdi-account-multiple',
                   dropped:true,
-                  children:[
-                    {
-                      label:'List',
-                      routeName:'RecruitmentList'
-                    },
-                    {
-                      label:'Create new recruitment',
-                      routeName:'RecruitmentList'
-                    },
-                    {
-                      label:'Processes history'
-                    },
-                    {
-                      label:'Notifying'
-                    },
-                    {
-                      label:'Email configuration'
-                    },
-
-                  ],
                 },
               ],
                 Management:[
                     {
                         label:'Employees',
                         icon:'mdi mdi-account-multiple',
+                        routeName:'EmployeeList',
                         dropped:false,
-                        children:[
-                            {
-                                label:'List',
-                                routeName:'EmployeeList'
-                            },
-                        ],
                     },
                     {
                         label:'Companies',
                         icon:'mdi mdi-domain',
                         dropped:false,
-                        children:[
-                            {
-                              label:'List',
-                              routeName:'CompanyList'
-                            },
-                            {
-                                label:'Planning',
-                                routeName:'Planning'
-                            },
-                            {
-                                label:'Jobs',
-                                routeName:'Jobs'
-                            },
-                        ]
+                        routeName:'CompanyList',
                     },
-                    {
-                        label:'Store',
-                        dropped:false,
-                        icon:'mdi mdi-book',
-                        children:[
-                          {
-                              label:'Variants',
-                              routeName:'VariantList'
-                          },
-                          {
-                            label:'Documents',
-                            routeName:'DocumentList'
-                          },
-                          {
-                            label:'Document types',
-                            routeName:'DocumentTypeList'
-                          },
-                          {
-                              label:'Status',
-                              routeName:'StatusList'
-                          },
-                          {
-                              label:'Actions',
-                              routeName:'ActionFunctionList'
-                          },
-                          {
-                            label:'Mails',
-                            routeName:'MailList'
-                          },
-                          {
-                            label:'Offers',
-                            routeName:'OfferList'
-                          },
-                          {
-                            label:'Houses',
-                            routeName:'HouseList'
-                          },
-                          {
-                            label:'Cars',
-                            routeName:'CarList'
-                          },
-                        ]
-                    },
-
+                  {
+                    label: 'Variants',
+                    routeName: 'VariantList',
+                    icon: 'mdi mdi-shape',
+                  },
+                  {
+                    label: 'Documents',
+                    routeName: 'DocumentList',
+                    icon: 'mdi mdi-file-document',
+                  },
+                  {
+                    label: 'Document types',
+                    routeName: 'DocumentTypeList',
+                    icon: 'mdi mdi-file-document-outline',
+                  },
+                  {
+                    label: 'Status',
+                    routeName: 'StatusList',
+                    icon: 'mdi mdi-check-circle',
+                  },
+                  {
+                    label: 'Actions',
+                    routeName: 'ActionFunctionList',
+                    icon: 'mdi mdi-gesture-tap',
+                  },
+                  {
+                    label: 'Mails',
+                    routeName: 'MailList',
+                    icon: 'mdi mdi-email-outline',
+                  },
+                  {
+                    label: 'Offers',
+                    routeName: 'OfferList',
+                    icon: 'mdi mdi-gift-outline',
+                  },
+                  {
+                    label: 'Houses',
+                    routeName: 'HouseList',
+                    icon: 'mdi mdi-home-outline',
+                  },
+                  {
+                    label: 'Cars',
+                    routeName: 'CarList',
+                    icon: 'mdi mdi-car-outline',
+                  },
                 ],
                 BonusSystem:[
 

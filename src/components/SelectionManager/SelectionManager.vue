@@ -49,7 +49,7 @@ export default{
 
 <template>
 
-<select @change="this.makeSelection" class="form-text-input form-select-main" v-model="selection" :key="skey">
+<select @change="this.makeSelection" class="form-text-input" v-model="selection" :key="skey">
   <option :value="null"> </option>
   <option v-for="option in filterInputCollection(this.data, param)" :key="option" :value="option">
     {{option.code ? `${option.code} ${option?.description ?? ''}` : (option.firstName ? `${option.firstName} ${option.lastName}`:``)}}

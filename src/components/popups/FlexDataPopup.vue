@@ -63,7 +63,7 @@ props:{
 
   align-items:center;
   .flex-data-popup{
-    background:#fff;
+    background:#100c25;
     width:60vw;
     border:solid 3px #fff;
     border-radius:8px;

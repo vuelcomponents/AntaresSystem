@@ -1,4 +1,4 @@
-import Starback from "starback";
+
 const options = {
     type: 'dot',
         quantity: 100,

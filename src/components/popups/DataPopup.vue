@@ -95,9 +95,8 @@ export default {
   display:none!important;
 }
 .data-popup{
-
     section{
-        background: rgba(252, 251, 251, 0.97);
+
 
     }
 }
@@ -133,11 +132,12 @@ export default {
   margin:0!important;
 }
 .no-bg-stepper .v-stepper-header{
-    background:#fff!important;
-    color:#00000070!important;
+    background:#0e091e!important;
+    color:#fff!important;
+  border-radius:50px;
 }
 .no-bg-stepper .v-stepper-header *{
-    color:#00000090!important;
+    color:#fff!important;
     font-weight:bold;
 }
 .no-bg-stepper .v-stepper-actions{
@@ -194,10 +194,12 @@ export default {
 }
 
 .form-text-input{
-  border:solid 1px #00000020;
+  border:solid 2px #00d0ff90;
+  color:#fff!important;
   border-radius:2px;
+  background:#ffffff15;
   font-size:0.8em;
-  padding:5px;
+  padding:10px;
   box-sizing: border-box;
   width:100%;
 }
@@ -210,6 +212,7 @@ export default {
   padding:0;
   padding-block:2px;
   font-size:0.7em;
+  color:#fff;
 }
 *{
   word-break:break-all;

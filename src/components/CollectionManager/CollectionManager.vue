@@ -154,7 +154,7 @@ export default{
       <div class="col-man-add" v-if="this.modules?.includes('create')">
         <div v-for="param in instance.getInputs('objects')" :key="param">
           <select style="width:95%;color:black" :hidden="hide(param)" class="form-text-input form-text-select" :disabled="lock(param)"  v-model="instance[param]">
-            <option v-for="option in filterInputCollection(inputCollections[param], param)" :key="option" :value="option">
+            <option v-for="option in filterInputCollection(inputCollections[param], param)" :key="option" :value="option" style="color:black">
               {{option?.code}}
             </option>
           </select>
@@ -182,7 +182,7 @@ export default{
       </div>
       <div class="col-man-add" v-if="this.modules?.includes('select')" style="padding-inline:12px">
         <select style="width:calc(100% - 55px); color:black" class="form-text-input form-text-select"  v-model="select">
-          <option v-for="option in filterInputCollection(list, collectionKey)" :key="option" :value="option">
+          <option v-for="option in filterInputCollection(list, collectionKey)" :key="option" :value="option" style="color:black;">
             {{option.code ? `${option.code} - ${option?.description}` : (option.firstName ? `${option.firstName} ${option.lastName}`:``)}}
           </option>
         </select>

@@ -27,9 +27,7 @@ Collection and Select Manager solution => ARCH.md
 #### v0.0.1
 
 ------------------------
-![img_2.png](img_2.png)
-![img_3.png](img_3.png)
-![img_4.png](img_4.png)
+![img_1.png](img_1.png)
 ### Commits & Tasks:
 
 -------------------------
@@ -38,8 +36,8 @@ Collection and Select Manager solution => ARCH.md
 
 Task Description:
 Implemented functionality to assess matches for Variants concerning individual employees, checked positions, recruitment processes, and companies. Introduced separate trackers for employees aligning with specific positions, recruitment processes, and companies seeking employees matching their positions.
-![img_7.png](img_7.png)
-![img_8.png](img_8.png)
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
 Actions Taken:
 
     Match Assessment for Employees:
@@ -90,8 +88,8 @@ Issues:
 
 Task Description:
 Implemented the Action Function, Status Functions, and introduced the concept of Status. This implementation enables the creation of functions that involve selecting the appropriate system function, such as Mail, and choosing a trigger. By selecting a StoreModel and a target object, the specified function will be invoked on the corresponding trigger during status changes.
-![img_9.png](img_9.png)
-![img_10.png](img_10.png)
+![img_16.png](img_16.png)
+![img_17.png](img_17.png)
 Actions Taken:
 
     Action Function Implementation:
@@ -136,7 +134,7 @@ Issues:
 
 Task Description:
 Added the Mail Function and introduced Mail objects for storing contextual data and HTML content for scheduled messages. This enhancement facilitates the creation, management, and sending of emails within the application.
-![img_11.png](img_11.png)
+![img_18.png](img_18.png)
 ![img_12.png](img_12.png)
 Actions Taken:
 
@@ -159,7 +157,7 @@ Issues:
 
 Task Description:
 Implemented file handling functionalities and extended the Collection Manager to enhance collection management capabilities. Additionally, updated existing interfaces responsible for collection management to accommodate the new features.
-![img_13.png](img_13.png)
+![img_19.png](img_19.png)
 Actions Taken:
 
     File Handling:
@@ -197,8 +195,8 @@ Issues:
 
     No significant issues encountered during the integration of the variant field into the employee chances calculation logic.
 #3 | 10.12.2023 | Arch1 | <span style="color:#008b8b">Commited</span>
-![img_14.png](img_14.png)
-![img_15.png](img_15.png)
+![img_20.png](img_20.png)
+![img_21.png](img_21.png)
 Task Description:
 Extended the functionality of the variant field to support three subfields: numeric value, date value, and realisation value. The numeric value accepts numerical data, the date value handles date information, and the realisation value accommodates an object of the Variant Realisation type, consisting of parameters code and description. This logic allows for diverse value comparisons, enabling powerful filtering and various other capabilities. In the context of this project, variants are responsible for calculating an employee's chances for a specific position.
 

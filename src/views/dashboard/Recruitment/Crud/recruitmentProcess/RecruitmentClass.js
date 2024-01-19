@@ -82,7 +82,15 @@ export default class extends ModelClass {
             }
             return false;
         },
-
+        employees: (options)=>{
+            if(!this.id){
+                return true;
+            }
+            if(this.id === 0){
+                return true;
+            }
+            return false;
+        },
         variants: (options)=>{
             if(!this.id){
                 return true;

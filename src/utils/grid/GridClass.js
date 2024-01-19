@@ -49,6 +49,16 @@ export default class {
         this.api.setQuickFilter(this.searchText);
     }
     options = {
+        getRowStyle: (params) => {
+            // Warunek dla parzystych i nieparzystych wierszy
+            if (params.node.rowIndex % 2 === 0) {
+                // Parzysty - czerwony
+                return { background: '#0e091e',color:'#fff',borderBottom:'solid 1px #ffffff20' };
+            } else {
+                // Nieparzysty - niebieski
+                return { background: '#110b26',color:'#fff',borderBottom:'solid 1px #ffffff20' };
+            }
+        },
         onGridReady: async params => {
             this.api = params.api;
             await this.loadList()

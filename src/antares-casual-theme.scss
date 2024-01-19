@@ -1,3 +1,20 @@
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: #ffffff50;
+}
+::-webkit-scrollbar-thumb {
+  background: #9b92da;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
+}
+._theme{
+  overflow-x:hidden;
+}
 .spinner-container{
   z-index:4;
   background:#00000055;
@@ -45,6 +62,7 @@
 }
 .select-renderer{
   width:100%; height:35px;display:flex;align-items:center;
+  background:#1a1f37;color:#0171f6;
 }
 .flex-center-center{
   display:flex;align-items:center;justify-content:center;
@@ -60,10 +78,9 @@
 body{
   margin:0;
   padding:0;
-  background:#fcfcfc;
+  background:#0e091e;
   font-size:1.2em;
   overflow-y:hidden!important;
-
 }
 body *{
   font-family:'Barlow-Reg', sans-serif;
@@ -87,12 +104,14 @@ nav {
   z-index:6;
   transition: all 0.2s ease;
 }
+.ag-header-container{
+  border-bottom:solid 1px black;
+}
 .web-header{
-  background:#001c20;
+  background:#0e091e;
   width:100%;
   height:70px;
   display:grid;
-  border-bottom: solid 4px rgba(164, 134, 134, 0.12);
   grid-template-columns:1fr 6fr;
   padding-inline:20px;
   img{
@@ -111,7 +130,7 @@ nav {
 }
 
 .on-dark-bg.p-menubar.p-component{
-  background:#001c20!important;
+  background:#0e091e!important;
   border:none;
   width:100%!important;
   color:#fff!important;
@@ -174,6 +193,10 @@ h1, h2, h3{
 .p-menuitem-icon{
   margin-right:10px;
 }
+.ag-body-viewport{
+  background:linear-gradient(177deg, rgba(17,13,37,1) 15%, rgba(16,12,37,1) 100%);
+}
+
 .module-splitter{
   div{
     background:  #001c20;
@@ -254,12 +277,13 @@ span:not(#hide-menu).rotable:hover{
   .ag-root-wrapper{
     border:none!important;
   }
+
   .ag-header-container * {
-    background: #01252a;
+    background: #0e091e;
     color:#fff;
   }
   .ag-header-row.ag-header-row-column *{
-    background:#001c20!important;
+    background: #140d2c !important;
   }
   .ag-header-row.ag-header-row-column-group{
     border-bottom: solid 1px black!important;
@@ -274,7 +298,9 @@ span:not(#hide-menu).rotable:hover{
   word-break: break-all;
 }
 .search_inp{
-  width:100%; background:#001c20; display:flex; justify-content:flex-end; align-items:center;
+  width:100%; background:#140d2c; display:flex; justify-content:flex-end; align-items:center;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
 }
 .dashboard-container{
   position:relative;
@@ -292,8 +318,6 @@ span:not(#hide-menu).rotable:hover{
   > section:nth-child(1) {
     margin-top:-50px;
     padding-top:50px;
-    background: linear-gradient(301deg, rgba(8,39,43,1) 0%, rgba(1,17,19,1) 100%);
-    border-right: solid 4px rgba(164, 134, 134, 0.22);
     width:100%;
     nav{
       padding:0;
@@ -314,21 +338,34 @@ span:not(#hide-menu).rotable:hover{
       font-size:0.8em;
       display:flex;
       align-items:center;
-      gap:30px;
-      border-bottom:solid 1px #ffffff29;
+      gap:20px;
       i{
         font-size:2em;
       }
       user-select: none;
     }
+    .link-icon-div{
+      background:#1a1f37;color:#0075ff; border-radius:4px; height:30px;width:30px; display:flex;align-items:center;justify-content:center;
+    }
     div:not(.sublink){
-      padding:10%;
+      padding-inline:10%;
+      padding-block:5px;
     }
     .sublink{
       color:#15abc1;
     }
+    .div-link-icon-div{
+      border-radius:15px;
+      padding-block:20px!important;
+    }
     div:hover{
-      background: #182b2f;
+      background: #1a1f37;
+      .link-icon-div{
+        background:#0075ff;
+      }
+      .link-icon{
+        color:#fff!important;
+      }
     }
 
   }
@@ -343,18 +380,19 @@ span:not(#hide-menu).rotable:hover{
   transition:all 0.4s ease;
 }
 .active-cell-custom{
-  background: #d5d5d5;
+  background: #1a1f37;
+  color: #0171f6;
   font-weight:bold;
   cursor:pointer;
 }
 
 .active-update-cell-custom {
-  background: #264548 !important;
-  color: white;
+  background: #1a1f37 !important;
+  color: #0171f6;
   cursor: pointer;
 }
 .multiple-create{
-  background:#264548;
+  background:#1a1f37;
   display: grid;
   grid-template-columns:1fr 1fr;
   padding-inline:20px;
@@ -364,7 +402,13 @@ span:not(#hide-menu).rotable:hover{
   }
   .form-text-input{
     background:#ffffff10;
-    color:#fff;
+    color:#fff!important;
+  }
+  input{
+    color:#fff!important;
+  }
+  option{
+    color:black!important;
   }
   button{
     margin-block:10px;

@@ -1,23 +1,24 @@
 <template>
-<div v-if="loading" class="spinner-container">
+  <img src="@/assets/refactor/bg.jpg" style="position:fixed;top:-25%;left:0; user-select:none; pointer-events:none;"/>
+
+  <div v-if="loading" class="spinner-container">
   <Spinner></Spinner>
 </div>
 <header class="web-header _theme" id="web-header" :hidden="this.$route.path.includes('webpage')">
     <div>
-        <img src="@/assets/stacked/nobglogo.png" class="mini-logo-smart" style="cursor:pointer" @click="$router.push({name:'home'})"/>
-        <span id="hide-menu" class="rotable" style="margin-left:15px; color:#ffffff90; cursor:pointer;"  @click="hideLeftMenu">
+        <span id="hide-menu" class="rotable" style="margin-left:15px; color:#ffffff; cursor:pointer;"  @click="hideLeftMenu">
             <i class="mdi mdi-menu"></i>
         </span>
-        <span class="rotable" style="margin-left:35px; color:#ffffff90; cursor:pointer;">
+        <span class="rotable" style="margin-left:35px; color:#ffffff; cursor:pointer;">
                 <i class="mdi mdi-cash"></i>
             </span>
-        <span class="rotable" style="margin-left:15px; color:#ffffff90; cursor:pointer;">
+        <span class="rotable" style="margin-left:15px; color:#ffffff; cursor:pointer;">
                 <i class="mdi mdi-database"></i>
             </span>
-        <span class="rotable" style="margin-left:15px; color:#ffffff90; cursor:pointer;">
+        <span class="rotable" style="margin-left:15px; color:#ffffff; cursor:pointer;">
                 <i class="mdi mdi-account-hard-hat"></i>
             </span>
-        <span class="rotable" style="margin-left:15px; color:#ffffff90; cursor:pointer;">
+        <span class="rotable" style="margin-left:15px; color:#ffffff; cursor:pointer;">
                 <i class="mdi mdi-domain"></i>
             </span>
     </div>
@@ -35,7 +36,6 @@
     <footer :style="`background-size: cover;background-repeat: no-repeat;background-position: center;background:url('${footer}');  user-select: none;position:absolute; min-width:100vw; right:0;left:auto; margin-top:100px;height:400px;`">
 </footer>
 </main>
-
 
 <!--  <router-view/>-->
 </template>
@@ -66,7 +66,6 @@ export default {
         return {services, emitter, toast};
     },
     mounted(){
-      activateStarback(document.getElementById('canvas'))
       activateRotables();
       this.emitter.on('loading', (state)=>{
          this.loading = state;
