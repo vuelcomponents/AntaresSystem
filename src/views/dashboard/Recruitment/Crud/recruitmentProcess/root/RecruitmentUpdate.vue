@@ -10,9 +10,9 @@
   <div>
     <ag-grid-vue
         class="ag-theme-alpine _grid grid-black"
-        style="height: 500px;width: 100%"
-        :rowData="grid.data"
+        style="width: 100%"
         domLayout="autoHeight"
+        :rowData="grid.data"
         suppressSizeToFit=true
         :grid-options="grid.options"
         rowSelection="multiple"
@@ -161,7 +161,6 @@ export default {
 
 <style>
 .morro{
-  background:#264548;
   color:#fff;
   text-align:left;
   padding:10px;

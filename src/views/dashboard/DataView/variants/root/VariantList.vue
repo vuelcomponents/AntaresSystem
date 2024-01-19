@@ -11,8 +11,9 @@
    <router-view></router-view>
     <ag-grid-vue
             class="ag-theme-alpine _grid grid-black"
-            style="height: 500px;width: 100%"
+            style="width: 100%"
             :rowData="grid.data"
+            domLayout="autoHeight"
             :grid-options="grid.options"
             rowSelection="multiple"
             animateRows="true"
