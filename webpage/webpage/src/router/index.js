@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import MainScreen from "@/screens/MainScreen.vue";
 import WelcomeScreen from "@/screens/welcome/WelcomeScreen.vue";
+import RecruitmentScreen from "@/screens/recruitment/RecruitmentScreen.vue";
 
 const routes = [
   {
@@ -12,7 +13,7 @@ const routes = [
       {
         path:'',
         name:'WelcomeScreen',
-        component:WelcomeScreen
+        component:RecruitmentScreen
       }
     ]
   },

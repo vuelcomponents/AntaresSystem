@@ -1,6 +1,6 @@
 import {Service} from "@/services/Service";
 
-export class RecruitmentService extends Service{
+export class EmployeeService extends Service{
     constructor(emitter) {
         super(emitter);
     }

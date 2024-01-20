@@ -9,17 +9,18 @@
       </section>
     </section>
   </main>
+
 </template>
 <script>
 import BarHeader from "@/components/BarHeader.vue";
 import SearchEngine from "@/components/SearchEngine.vue";
+
 
 export default {
   name: "MainScreen",
   components:{BarHeader, SearchEngine},
   data(){
     return{
-
     }
   },
   mounted(){

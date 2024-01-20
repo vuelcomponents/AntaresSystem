@@ -7,7 +7,7 @@ export default {
 <template>
   <main class="welcome-screen-container">
     <section class="welcome-screen-menu">
-dsadas
+      welcomescreen.vue
     </section>
   </main>
 </template>

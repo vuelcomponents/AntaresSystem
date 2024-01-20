@@ -4,7 +4,7 @@ export class Service{
     emitter;
     pathName = ''
     _http = axios.create({
-        baseURL:"http://localhost:5170/integration/",
+        baseURL:"http://localhost:5170/api/",
     });
     constructor(emitter) {
         this._http.interceptors.request.use((config) => {

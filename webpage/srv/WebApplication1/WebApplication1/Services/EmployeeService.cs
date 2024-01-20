@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using RestSharp;
+﻿using RestSharp;
 using RestSharp.Authenticators;
 using WebApplication1.Dto;
 
@@ -20,7 +19,6 @@ public class EmployeeService : IEmployeeService
         {
             throw new BadHttpRequestException("Main Server Response is empty");
         }
-
         return response;
     }
 }

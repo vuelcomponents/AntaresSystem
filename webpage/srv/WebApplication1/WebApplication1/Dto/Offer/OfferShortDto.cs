@@ -13,6 +13,6 @@ public class OfferShortDto
     public string? Message { get; set; }
     public bool? Global { get; set; }
     public CompanyShortDto? Company { get; set; }
-    public IdCodeDto? Image { get; set; }
+    public _DocumentDto? Image { get; set; }
     public PositionShortDto? Position { get; set; }
 }

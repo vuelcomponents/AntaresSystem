@@ -1,0 +1,19 @@
+export class Employee{
+ id
+ firstName
+ lastName
+ email
+ dateOfBirth
+ privatePhone
+ houseAndLocalNumber
+ streetName
+ postCode
+ city
+ subHouseAndLocalNumber
+ subStreetName
+ subPostcode
+ subCity
+ pesel
+ password
+ repassword;
+}
