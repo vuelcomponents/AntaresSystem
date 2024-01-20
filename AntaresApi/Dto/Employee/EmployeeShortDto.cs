@@ -16,4 +16,6 @@ public class EmployeeShortDto
     public string? SubStreetName { get; set; }
     public string? SubPostcode { get; set; }
     public string? SubCity { get; set; }
+    public string? Pesel { get; set; }
+    public string? Password { get; set; }
 }

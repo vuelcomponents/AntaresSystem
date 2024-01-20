@@ -87,6 +87,7 @@ public class AutoMapper : Profile
         CreateMap<Offer, IdCodeDto>();
         CreateMap<Offer, OfferShortDto>();
         CreateMap<Recruitment, RecruitmentDto>();
+        CreateMap<Recruitment, RecruitmentLiteDto>();
         CreateMap<Recruitment, IdCodeDto>();
         CreateMap<Recruitment, IdDto>();
         CreateMap<RecruitmentContact, RecruitmentContactDto>();

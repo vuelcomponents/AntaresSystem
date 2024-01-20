@@ -1,0 +1,2 @@
+obj\Debug\net8.0/Proto-recruitmentGrpc.cs \
+obj\Debug\net8.0/ProtoRecruitment.cs: Protos/proto-recruitment.proto

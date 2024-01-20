@@ -1,5 +1,7 @@
 using System.Text.Json.Serialization;
 using AntaresApi;
+using AntaresApi.Integrations.Employee;
+using AntaresApi.Integrations.Offer;
 using AntaresApi.Services;
 using AntaresApi.Services.Interfaces;
 using AutoMapper;
@@ -36,6 +38,8 @@ builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IRecruitmentService, RecruitmentService>();
 builder.Services.AddScoped<IPlanService, PlanService>();
+builder.Services.AddScoped<IOfferIntegrationService, OfferIntegrationService>();
+builder.Services.AddScoped<IEmployeeIntegrationService, EmployeeIntegrationService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.Configure<FormOptions>(options =>
 {

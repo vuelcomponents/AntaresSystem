@@ -1,0 +1,119 @@
+@import '@mdi/font/css/materialdesignicons.css';
+@import 'mdi/css/materialdesignicons.css';
+@import 'primevue/resources/primevue.min.css';
+@import url('primevue/resources/themes/lara-light-indigo/theme.css');
+@font-face {
+  font-family: "Nunish Normal";
+  src: url("@/assets/nunito/Nunito-Medium.ttf")
+}
+@font-face {
+  font-family: "Nunish Fat";
+  src: url("@/assets/nunito/Nunito-Black.ttf")
+}
+body{
+  background:#f8f8f8;
+
+}
+body *{
+  font-family: "Nunish Normal", sans-serif;
+}
+.flex-center{
+  display:flex;justify-content:center;align-items:center;
+}
+.flex-start{
+  display:flex;justify-content:flex-start;align-items:flex-start;
+}
+.main-screen-header-container{
+  background:white;
+  box-sizing:border-box;
+  display:grid;
+  grid-template-columns:3fr 1fr;
+  max-width:100vw;
+  width:100vw;
+}
+.main-screen-header{
+  width:100%;
+  box-sizing:border-box;
+  display:flex;
+  gap:40px;
+  padding:8px;
+  justify-content: flex-start;
+  align-items:center;
+  font-size:1.2em;
+}
+.main-screen-header-right{
+  @extend .main-screen-header;
+  justify-content: flex-end;
+}
+.bold{
+  font-family: "Nunish Fat", sans-serif;
+}
+.r-link{
+  cursor:pointer;
+  padding:8px;
+  border-radius:16px;
+  border:solid 3px white;
+  transition: all 0.8s ease;
+}
+.r-link:hover{
+  border-color: #018aff;
+  color: #018aff;
+}
+.search-engine-container-container{
+  padding-block:15px;
+  padding-inline:3%;
+  width:100%;
+}
+.search-engine-container{
+  box-sizing:border-box;
+  background: url("@/assets/factory.jpg");
+  background-position-y: -200px;
+  border-radius:40px;
+  width:100%;
+  height:100px;
+  .search-engine{
+    width:100%;
+    height:100%;
+    background:#ffffff50;
+    box-sizing: border-box;
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    align-items:center;
+    input, button, .p-dropdown{
+      min-height:60px;
+    }
+    .p-dropdown{
+      @extend .flex-center;
+    }
+  }
+}
+.search-input{
+  min-width:130px;
+  font-size:1.2em;
+}
+.search-input.s-text{
+  min-width:30vw;
+}
+.border100m100box{
+  width:100vw;
+  max-width:100vw;
+  box-sizing:border-box;
+}
+.main-screen-router{
+  width:100vw;
+  display:grid;
+  grid-template-columns:1fr 3fr;
+  .navigation-container{
+    padding:0;
+    padding-block:15px;
+  }
+  .navigation{
+    background: #ebf0f1;
+    height:100vh;
+    border-radius:10px;
+    @extend  .flex-start;
+    font-family:'Nunish Fat', sans-serif;
+
+  }
+}

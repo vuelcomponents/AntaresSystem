@@ -1,0 +1,6 @@
+obj\Debug\net8.0/Proto-offerGrpc.cs \
+obj\Debug\net8.0/ProtoOffer.cs: Protos/proto-company.proto\
+ Protos/proto-position.proto\
+ Protos/proto-document.proto\
+ Protos/proto-recruitment.proto\
+ Protos/proto-offer.proto

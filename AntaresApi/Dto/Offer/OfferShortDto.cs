@@ -15,4 +15,5 @@ public class OfferShortDto
     public CompanyShortDto? Company { get; set; }
     public IdCodeDto? Image { get; set; }
     public PositionShortDto? Position { get; set; }
+    public RecruitmentLiteDto? Recruitment { get; set; }
 }

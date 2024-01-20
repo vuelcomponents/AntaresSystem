@@ -1,0 +1,2 @@
+obj\Debug\net8.0/Proto-positionGrpc.cs \
+obj\Debug\net8.0/ProtoPosition.cs: Protos/proto-position.proto

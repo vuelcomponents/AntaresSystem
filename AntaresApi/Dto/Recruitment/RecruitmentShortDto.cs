@@ -4,7 +4,6 @@ using AntaresApi.Dto.Offer;
 using AntaresApi.Dto.Position;
 using AntaresApi.Dto.Status;
 using AntaresApi.Dto.Variant.Variant;
-using AntaresApi.Models.Recruitment;
 
 namespace AntaresApi.Dto.Recruitment;
 
